@@ -1,7 +1,8 @@
 //
 // Foundation Variables
 //
-
+$topbar-bg: #212D48 !default;
+$column-gutter: emCalc(60px);
 // The default font-size is set to 100% of the browser style sheet (usually 16px)
 // for compatibility with browser-based text zoom or user-set defaults.
 $base-font-size: 100% !default;
