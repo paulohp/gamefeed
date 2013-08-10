@@ -1,6 +1,7 @@
 Gamefeed::Application.routes.draw do
   get "welcome/index"
-  devise_for :competitors
+
+  devise_for :competitors, :controllers => { :omniauth_callbacks => "competitors/omniauth_callbacks" }
   resources :competitors
 
   resources :championships

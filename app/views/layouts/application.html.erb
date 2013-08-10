@@ -30,14 +30,14 @@
     <section class="top-bar-section">
       <ul class="right">
         <li class="divider"></li>
-        <li><%= link_to "Browse Championships", championships_path %></li>
+        <li><%= link_to "Torneios Abertos", championships_path %></li>
         <li class="divider"></li>
         <% if competitor_signed_in? %>
           <li><%= link_to "Novo Torneio", new_championship_path %></li>
           <li class="divider"></li>
-          <li><%= link_to "Contact Us" %></li>
+          <li><%= link_to "Perfil", competitor_path %></li>
           <li class="divider"></li>
-          <li><%= link_to "Cart" %></li>
+          <li><%= link_to "Sair", destroy_competitor_session_path %></li>
         <% else %>
           <li><%= link_to "Login", new_championship_path %></li>
           <li class="divider"></li>

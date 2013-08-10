@@ -10,6 +10,9 @@ class CompetitorsController < ApplicationController
   # GET /competitors/1
   # GET /competitors/1.json
   def show
+    if current_competitor.email == "example@company.com"
+      redirect_to "/competitors/#{current_competitor.id}/edit"
+    end
   end
 
   # GET /competitors/new

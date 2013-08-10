@@ -33,6 +33,7 @@ group :doc do
 end
 gem 'devise'
 gem 'carrierwave'
+gem 'omniauth-steam', :git => 'git://github.com/paulohp/omniauth-steam.git'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

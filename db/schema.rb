@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130810160515) do
+ActiveRecord::Schema.define(version: 20130810194115) do
 
   create_table "championships", force: true do |t|
     t.string   "name"
@@ -43,6 +43,8 @@ ActiveRecord::Schema.define(version: 20130810160515) do
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
     t.string   "picture"
+    t.string   "provider"
+    t.string   "uid"
   end
 
   add_index "competitors", ["email"], name: "index_competitors_on_email", unique: true
