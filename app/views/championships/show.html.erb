@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @championship.name %>
+</p>
+
+<p>
+  <strong>Game:</strong>
+  <%= @championship.game %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @championship.date %>
+</p>
+
+<p>
+  <strong>Number competitors:</strong>
+  <%= @championship.number_competitors %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @championship.description %>
+</p>
+
+<%= link_to 'Edit', edit_championship_path(@championship) %> |
+<%= link_to 'Back', championships_path %>

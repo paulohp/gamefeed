@@ -1,0 +1,35 @@
+<h1>Listing championships</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Game</th>
+      <th>Date</th>
+      <th>Number competitors</th>
+      <th>Description</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @championships.each do |championship| %>
+      <tr>
+        <td><%= championship.name %></td>
+        <td><%= championship.game %></td>
+        <td><%= championship.date %></td>
+        <td><%= championship.number_competitors %></td>
+        <td><%= championship.description %></td>
+        <td><%= link_to 'Show', championship %></td>
+        <td><%= link_to 'Edit', edit_championship_path(championship) %></td>
+        <td><%= link_to 'Destroy', championship, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Championship', new_championship_path %>
