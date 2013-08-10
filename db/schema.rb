@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130810155917) do
+ActiveRecord::Schema.define(version: 20130810160515) do
 
   create_table "championships", force: true do |t|
     t.string   "name"
@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(version: 20130810155917) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "picture"
+    t.boolean  "approved",           default: false
   end
 
   create_table "competitors", force: true do |t|

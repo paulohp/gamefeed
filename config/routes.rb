@@ -1,4 +1,5 @@
 Gamefeed::Application.routes.draw do
+  get "welcome/index"
   devise_for :competitors
   resources :competitors
 
@@ -8,7 +9,7 @@ Gamefeed::Application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'championships#index'
+  root 'welcome#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
