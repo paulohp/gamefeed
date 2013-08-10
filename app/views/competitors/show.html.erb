@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @competitor.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @competitor.email %>
+</p>
+
+<p>
+  <strong>Bio:</strong>
+  <%= @competitor.bio %>
+</p>
+
+<p>
+  <strong>Username:</strong>
+  <%= @competitor.username %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @competitor.city %>
+</p>
+
+<%= link_to 'Edit', edit_competitor_path(@competitor) %> |
+<%= link_to 'Back', competitors_path %>

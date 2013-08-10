@@ -1,4 +1,7 @@
 Gamefeed::Application.routes.draw do
+  devise_for :competitors
+  resources :competitors
+
   resources :championships
 
   # The priority is based upon order of creation: first created -> highest priority.
