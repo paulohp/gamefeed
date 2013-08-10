@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130810151000) do
+ActiveRecord::Schema.define(version: 20130810155917) do
 
   create_table "championships", force: true do |t|
     t.string   "name"
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 20130810151000) do
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "picture"
   end
 
   create_table "competitors", force: true do |t|
@@ -40,6 +41,7 @@ ActiveRecord::Schema.define(version: 20130810151000) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
+    t.string   "picture"
   end
 
   add_index "competitors", ["email"], name: "index_competitors_on_email", unique: true

@@ -1,4 +1,4 @@
-<%= form_for(@championship) do |f| %>
+<%= form_for(@championship, :html => { :multipart => true }) do |f| %>
   <% if @championship.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@championship.errors.count, "error") %> prohibited this championship from being saved:</h2>
@@ -30,6 +30,10 @@
   <div class="field">
     <%= f.label :description %><br>
     <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    <%= f.label :picture %><br>
+    <%= f.file_field :picture %>
   </div>
   <div class="actions">
     <%= f.submit %>

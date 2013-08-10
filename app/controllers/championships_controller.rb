@@ -1,5 +1,6 @@
 class ChampionshipsController < ApplicationController
   before_action :set_championship, only: [:show, :edit, :update, :destroy]
+  before_filter :authenticate_competitor!, only: [:show, :edit, :new]
 
   # GET /championships
   # GET /championships.json
@@ -69,6 +70,6 @@ class ChampionshipsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def championship_params
-      params.require(:championship).permit(:name, :game, :date, :number_competitors, :description)
+      params.require(:championship).permit(:picture, :name, :game, :date, :number_competitors, :description)
     end
 end
