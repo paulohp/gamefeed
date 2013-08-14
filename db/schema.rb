@@ -27,12 +27,12 @@ ActiveRecord::Schema.define(version: 20130810194115) do
 
   create_table "competitors", force: true do |t|
     t.string   "name"
-    t.string   "email"
     t.string   "bio"
     t.string   "username"
     t.string   "city"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
